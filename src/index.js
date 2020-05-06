@@ -13,7 +13,7 @@ const GAME_WIDTH = 800;
 var paddle = new Paddle(GAME_WIDTH, GAME_HEIGHT);
 
 // instantiate Ball object
-var ball = new Ball();
+var ball = new Ball(GAME_WIDTH, GAME_HEIGHT);
 
 // instantiate InputHandler object for moving the paddle
 new InputHandler(paddle);
@@ -36,6 +36,7 @@ function gameLoop(timestamp) {
   // redraws paddle
   paddle.draw(ctx);
 
+  ball.update(deltaTime);
   // redraw ball
   ball.draw(ctx);
 
@@ -43,4 +44,4 @@ function gameLoop(timestamp) {
   requestAnimationFrame(gameLoop);
 }
 
-gameLoop();
+requestAnimationFrame(gameLoop);
