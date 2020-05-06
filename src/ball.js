@@ -1,7 +1,7 @@
 export default class Ball {
-  constructor(gameWidth, gameHeight){
-    this.gameHeight = gameHeight;
-    this.gameWidth = gameWidth;
+  constructor(game){
+    this.gameHeight = game.gameHeight;
+    this.gameWidth = game.gameWidth;
     this.image = document.getElementById("img_ball");
     this.position = {
       x: 10,
