@@ -15,20 +15,18 @@ export default class InputHandler {
     document.addEventListener("keyup", function(event) {
       switch(event.keyCode) {
         case 37:
-          if(paddle.currSpeed < 0) {
+          if(paddle.speed < 0) {
             paddle.stop();
           }
           
           break;
 
         case 39:
-          if(paddle.currSpeed > 0) {
+          if(paddle.speed > 0) {
             paddle.stop();
           }
           break;
       }
     });
-
   }
-
 }
