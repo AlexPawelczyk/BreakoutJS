@@ -39,6 +39,7 @@ export default class Game {
   /* Function for updating all game objects */
   update(deltaTime) {
     this.gameObjects.forEach((object) => object.update(deltaTime));
+    this.gameObjects = this.gameObjects.filter(object => !object.markedForDeletion);
   }
 
 }
